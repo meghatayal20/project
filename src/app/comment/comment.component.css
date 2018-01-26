@@ -1,0 +1,14 @@
+.navbar-inverse{
+    background-color: #ffca28;
+}
+
+.navbar-nav a{
+    font-weight: bold;
+    font-family:Lucida;
+    color: #072d42;
+}
+
+.navbar-nav li{
+    border-left:1px solid white;
+}
+

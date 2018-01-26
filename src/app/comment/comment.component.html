@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">User Board</a>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li style="border-left:1px solid white;border-right:1px solid white"><a >Welcome {{email}}</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style="cursor:pointer" (click)="logout()">Logout</a></li>
+    </ul>
+
+    </div>
+</nav>
+
+
+
+<form>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+            <label for="comment">Enter Comment:</label>
+           <input type="text" class="form-control"  #comment>
+         </div>
+      </div>    
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click) = "addComment(comment.value)" >Submit Comment</button>
+</form>
+
+    <div class="container">
+        <h2> User Feeds</h2>
+        <div class="panel panel-default">
+          <div class="panel-body">{{email}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{comment.value}}</div>
+        </div>
+     </div>

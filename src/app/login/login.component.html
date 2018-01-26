@@ -1,0 +1,29 @@
+<div class="container-fluid">
+ <div class="panel-body panel-pad">
+  <form  #user="ngForm" (ngSubmit)="LoginSub(user.value)" >
+   <div class="row">
+     <div class="input-field col-sm-12">
+   <div class="form-group">
+     <label for="email">Email address:</label>
+     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required ngModel 
+    pattern="[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~.]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$" minlength="6" maxlength="30" title="Eg:- abc123@domain.com">
+  </div>
+</div>
+</div>
+
+<div class="row">
+   <div class="input-field col-sm-12">
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required ngModel
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Minimum 8 Characters long with at least One Uppercase, One Lowercase & One digit" 
+    maxlength="20">
+  </div>
+  </div>
+  </div>
+  <span style="color: blue;font-weight:bold;font-size:19px;">{{errorMsg}}</span><br/>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+ </div>
+</div>
